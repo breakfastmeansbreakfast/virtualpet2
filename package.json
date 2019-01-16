@@ -1,0 +1,22 @@
+{
+  "name": "virtualpet2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/breakfastmeansbreakfast/virtualpet2.git"
+  },
+  "author": "Tom Dunn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/breakfastmeansbreakfast/virtualpet2/issues"
+  },
+  "homepage": "https://github.com/breakfastmeansbreakfast/virtualpet2#readme",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
+}
