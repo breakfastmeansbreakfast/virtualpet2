@@ -19,4 +19,13 @@ describe('constructor', () => {
     expect(pet.hunger).toEqual(5);
     expect(pet.fitness).toEqual(7);
   });
+  it('checks keeping fit', () => {
+    const pet = new Pet('poopy');
+    pet.growUp();
+    pet.growUp();
+    pet.walk();
+    pet.walk();
+    pet.walk();
+    expect(pet.fitness).toEqual(10);
+  });
 });
