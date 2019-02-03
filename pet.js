@@ -13,11 +13,22 @@ function Pet(name) {
     this.fitness -= 3;
     }
   this.walk = function() {
-    if (this.fitness > 7) {
-      this.fitness = 10
-    } else {
-      this.fitness +=4
-    }
+    if (this.fitness >= 6) {this.fitness = 10}
+    else {this.fitness +=4}
+  }
+  this.feed = function() {
+    if (this.hunger >= 3) {this.hunger -=3}
+    else {this.hunger =0}
+  }
+  this.checkUp = function() {
+    if (this.hunger >= 5) {return 'I am hungry AND I need a walk'}
+    else if (this.fitness <= 3) {return 'I need a walk'}
+    else if (this.fitness <= 3 && this.hunger>= 5) {return 'I am hungry AND I need a walk'}
+    else {return 'I feel great!'}
+  }
+  this.isAlive = function() {
+    if (this.fitness <=0 || this.hunger >= 10 || this.age >= 30) {return false}
+    else {return true}
   }
 }
 

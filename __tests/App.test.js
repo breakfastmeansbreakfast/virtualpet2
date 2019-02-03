@@ -28,4 +28,28 @@ describe('constructor', () => {
     pet.walk();
     expect(pet.fitness).toEqual(10);
   });
+  it('checks hunger', () => {
+    const pet = new Pet('poopy');
+    pet.growUp();
+    pet.growUp();
+    pet.feed();
+    pet.feed();
+    pet.feed();
+    pet.feed();
+    expect(pet.hunger).toEqual(0);
+  });
+  it('checkup function', () => {
+    const pet = new Pet('laddo');
+    pet.growUp();
+    pet.growUp();
+    expect(pet.checkUp()).toEqual('I am hungry AND I need a walk');
+  });
+  it('checks if pet is alive', () => {
+    const pet = new Pet('piss');
+    pet.growUp();
+    pet.growUp();
+    pet.growUp();
+    pet.growUp();
+    expect(pet.isAlive()).toEqual(false);
+  })
 });
