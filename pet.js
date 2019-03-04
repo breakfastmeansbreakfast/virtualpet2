@@ -43,6 +43,9 @@ function Pet(name) {
   this.adoptChild = function(child) {
     this.children.push(child)
   }
+  this.haveBaby = function(name) {
+    this.children.push({name: name})
+  }
 }
 
 module.exports = Pet;
