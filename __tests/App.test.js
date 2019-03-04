@@ -52,4 +52,9 @@ describe('constructor', () => {
     pet.growUp();
     expect(pet.isAlive()).toEqual(false);
   })
+  it('throws an error if pet is not alive', () => {
+    const pet = new Pet('piss');
+    pet.age = 30;
+    expect(pet.feed).toThrow('Your pet is no longer alive :(');
+  })
 });
